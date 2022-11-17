@@ -30,6 +30,9 @@ file `files/measurements.xlsx` or create a `Symfony Command` to process the file
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.
 
+**IMPORTANT**: After you have completed the tasks details below, please push to your own GitHub repository and provide
+a link to your solution.
+
 ## Expectations
 **Mandatory**
 - SOLID and KISS Principles
