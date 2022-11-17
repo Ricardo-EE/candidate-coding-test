@@ -35,20 +35,27 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Clean readable code
 - Security
 - Data Validation
-- PHP Coding Standards
-- Linting
+- PHP Coding Standards, Linting (update README.md on how to run)
 - PHP Strict Types - must use >= PHP 8.0
 - Guard against SQL injection attacks
-- Unit Tests
+- Unit Tests (update README.md on how to run)
 
 **Nice to have**
 - Functional tests
-- Use of Bootstrap: https://getbootstrap.com/
+- Use WebPack and implement Bootstrap: https://getbootstrap.com/
 
-### Bonus
+### Bonus - not expected
 Use the API https://postcodes.io/postcodes `Bulk Reverse Geocoding` and POST `Longitude` and `Latitude` from the
 supplied `Pollutant Data` to retrieve all relevant `admin_county` from API.  Use this instead of the `Region Name`
 supplied in the source `Pollutant Data` section detailed below.
+
+### Super Bonus - not expected
+Implement ClamAV and virus check the uploaded `Excel` data file - if you choose this route.
+
+Uncomment the ClamAV configurations in the `docker-compose.yaml` file.
+
+**Hint**: Use `fsockopen($hostname, $port)` and a `Drupal` example may help you.  
+See `.env` for ClamAV environment variables.
 
 ### Pollutant Data
 As stated in the requirements, you can either build a Symfony Form with all the data supplied as `input` fields in a

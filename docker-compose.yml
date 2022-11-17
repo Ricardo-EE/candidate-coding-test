@@ -1,13 +1,24 @@
 version: '3.9'
 
 services:
+#  clamav:
+#    image: clamav/clamav
+#    container_name: ricardo-clamav
+#    restart: unless-stopped
+#    volumes:
+#      - clamav:/var/lib/clamav
+#    ports:
+#      - "3310:3310"
+#      - "7357:7357"
+
   php:
-    container_name: technical-test-app
+    container_name: ricardo-php
     restart: on-failure
     image: docker.io/library/ricardo-technical-test:develop
     build: .
     depends_on:
       - db
+#      - clamav
     environment:
       HOME: /var/www/html
       APP_ENV: develop
@@ -23,12 +34,12 @@ services:
       - "8080:80"
 
   db:
-    container_name: technical-test-db
+    container_name: ricardo-db
     image: mariadb:10.6.11
     restart: on-failure
     command: [
-      '--character-set-server=utf8mb4',
-      '--collation-server=utf8mb4_unicode_ci'
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci"
     ]
     environment:
       - MYSQL_ROOT_PASSWORD=Qy8ojBPmiF6Tfezt
@@ -36,9 +47,10 @@ services:
       - MYSQL_USER=technical_test
       - MYSQL_PASSWORD=Qy8ojBPmiF6Tfezt
     volumes:
-      - technical-test-db:/var/lib/mysql
+      - db:/var/lib/mysql
     ports:
-      - '3306:3306'
+      - "3306:3306"
 
 volumes:
-  technical-test-db:
+  db:
+#  clamav:
