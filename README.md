@@ -60,11 +60,11 @@ variables.
 
 ## Pollutant Data
 As stated in the requirements, you can either;
-- Build a `Symfony Form` with all the data supplied as `input` fields,
-- Or, use a `Symfony Form` to upload the supplied `Excel` data file,
-- Or, use `Symfony Command` to process the supplied `Excel` data file.
+- Build a `Symfony Form` with all the data supplied as `input` fields, using limited data from the sample file provided
+- Or, use a `Symfony Form` to upload the supplied `Excel` data file
+- Or, use `Symfony Command` to process the supplied `Excel` data file
 
-- Data File: `files/measurements.xlsx`
+**Data File**: `files/measurements.xlsx`
 
 Data submitted via an HTML form will be as follows:
 
