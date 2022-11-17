@@ -29,7 +29,7 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.
 
-### Expectations
+## Expectations
 **Mandatory**
 - SOLID and KISS Principles
 - Clean readable code
@@ -57,7 +57,7 @@ Uncomment the ClamAV configurations in the `docker-compose.yaml` file.
 **Hint**: Use `fsockopen($hostname, $port)`... A `Drupal` example may help you.  See `.env` for ClamAV environment
 variables.
 
-### Pollutant Data
+## Pollutant Data
 As stated in the requirements, you can either build a Symfony Form with all the data supplied as `input` fields in a
 `Symfony Form` or use a `Symfony Form` to upload the supplied `Excel` data file and process it.
 
@@ -75,7 +75,7 @@ Data submitted via an HTML form will be as follows:
 - Date (string)
 - Time (string)
 
-#### Example of Pollutants and Measurements HTML form elements:
+### Example of Pollutants and Measurements HTML form elements:
 ```html
 <input type="text" name="measurement[pollutant][NO2]" value="2.00">
 <input type="text" name="measurement[pollutant][SO2]" value="3.00">
