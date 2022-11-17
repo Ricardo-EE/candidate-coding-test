@@ -59,8 +59,10 @@ Uncomment the ClamAV configurations in the `docker-compose.yaml` file.
 variables.
 
 ## Pollutant Data
-As stated in the requirements, you can either build a Symfony Form with all the data supplied as `input` fields in a
-`Symfony Form` or use a `Symfony Form` to upload the supplied `Excel` data file and process it.
+As stated in the requirements, you can either;
+- Build a `Symfony Form` with all the data supplied as `input` fields,
+- Or, use a `Symfony Form` to upload the supplied `Excel` data file,
+- Or, use `Symfony Command` to process the supplied `Excel` data file.
 
 - Data File: `files/measurements.xlsx`
 
