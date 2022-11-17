@@ -1,8 +1,8 @@
 {
-    "name" : "ricardo-aea/technical-test",
+    "name" : "ricardo-aea/candidate-technical-test",
     "type" : "project",
     "license" : "proprietary",
-    "description" : "Ricardo Technical Test",
+    "description" : "Candidate Technical Test",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [{
@@ -62,7 +62,8 @@
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "secure-http": true
     },
     "autoload": {
         "psr-4": {
