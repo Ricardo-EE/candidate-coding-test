@@ -54,8 +54,8 @@ Implement ClamAV and virus check the uploaded `Excel` data file - if you choose 
 
 Uncomment the ClamAV configurations in the `docker-compose.yaml` file.
 
-**Hint**: Use `fsockopen($hostname, $port)` and a `Drupal` example may help you.  
-See `.env` for ClamAV environment variables.
+**Hint**: Use `fsockopen($hostname, $port)`... A `Drupal` example may help you.  See `.env` for ClamAV environment
+variables.
 
 ### Pollutant Data
 As stated in the requirements, you can either build a Symfony Form with all the data supplied as `input` fields in a
