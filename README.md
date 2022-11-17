@@ -36,12 +36,12 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Security
 - Data Validation
 - PHP Coding Standards, Linting (update README.md on how to run)
-- PHP Strict Types - must use >= PHP 8.0
+- PHP Strict Types (must use >= PHP 8.0)
 - Guard against SQL injection attacks
-- Unit Tests (update README.md on how to run)
 
 **Nice to have**
-- Functional tests
+- Swap use of environmental variables `.env` for Symfony parameters
+- Unit and/or Functional Tests (update README.md on how to run)
 - Use WebPack and implement Bootstrap: https://getbootstrap.com/
 
 ### Bonus - not expected
