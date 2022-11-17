@@ -25,7 +25,8 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
     see `Example of Pollutants and Measurements HTML form elements`
     - NOTE: You don't have to use the whole dataset.
   - **Or**; Process a file upload using a `Symfony Form` using the supplied `Pollutant Data`
-file `files/measurements.xlsx` or create a `Symfony Command` to process the file.
+file `files/measurements.xlsx`
+  - **Or**; Create a `Symfony Command` to process the file.
 - Symfony Controller to process the submitted data
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.
