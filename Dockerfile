@@ -1,5 +1,5 @@
 FROM node:latest AS node
-FROM php:8.0-apache
+FROM php:8.1-apache
 
 USER root
 
@@ -8,7 +8,7 @@ COPY --from=node /usr/local/bin/node /usr/local/bin/node
 RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    zip unzip coreutils zlib1g-dev libpng-dev libjpeg-dev vim git gnupg
+    zip unzip coreutils zlib1g-dev libzip-dev libpng-dev libjpeg-dev vim git gnupg
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
@@ -16,7 +16,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get install -y --no-install-recommends nodejs yarn
 
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ \
-    && docker-php-ext-install gd
+    && docker-php-ext-install zip pdo_mysql gd
 
 # apache modules
 RUN a2enmod rewrite
