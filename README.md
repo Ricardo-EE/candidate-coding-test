@@ -12,7 +12,7 @@ and report that their facility has produced these emissions today.
 
 ## Docker
 This project can be automatically started as a Docker Container, just run: `docker-compose up -d` and visit the URL:
-http://localhost:8080.  If you prefer, you can also run via Symfony Web Server, make sure you set-up your own database.
+http://localhost:8080.  It is expected that your submission will work with the supplied Docker set-up in this project.
 
 See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB database
 
@@ -37,8 +37,8 @@ file `files/measurements.xlsx`
 - Clean readable code
 - Security
 - Data Validation
-- PHP Coding Standards, Linting (update README.md on how to run)
-- PHP Strict Types (must use >= PHP 8.0)
+- PHP Coding Standards, Linting (update README.md on how to run and any other code analyse)
+- PHP Strict Types
 - Guard against SQL injection attacks
 
 **Nice to have**
