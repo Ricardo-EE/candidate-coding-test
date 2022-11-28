@@ -23,9 +23,10 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Processing Pollutant Data
   - **Either**; Build a `Symfony Form` for submitting dummy air pollution data,
     see `Example of Pollutants and Measurements HTML form elements`
-    - NOTE: You don't have to use the whole dataset.
+    - **NOTE**: You don't have to use the whole dataset.
   - **Or**; Process a file upload using a `Symfony Form` using the supplied `Pollutant Data`
 file `files/measurements.xlsx`
+    - **IMPORTANT**: Data uploads should be move/stored into the directory `data/tmp/`
   - **Or**; Create a `Symfony Command` to process the file.
 - Symfony Controller to process the submitted data
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
@@ -37,7 +38,9 @@ file `files/measurements.xlsx`
 - Clean readable code
 - Security
 - Data Validation
-- PHP Coding Standards, Linting (update README.md on how to run and any other code analyse)
+- PHP Coding Standards, Linting, etc.
+  - Update README.md on how to run
+  - Hint: These tools are installed via `composer.json` please make sure you use them.
 - PHP Strict Types
 - Guard against SQL injection attacks
 
@@ -63,6 +66,7 @@ variables.
 As stated in the requirements, you can either;
 - Build a `Symfony Form` with all the data supplied as `input` fields, using limited data from the sample file provided
 - Or, use a `Symfony Form` to upload the supplied `Excel` data file
+  - Data uploads should be move/stored into the directory `data/tmp/`
 - Or, use `Symfony Command` to process the supplied `Excel` data file
 
 **Data File**: `files/measurements.xlsx`

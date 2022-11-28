@@ -25,6 +25,7 @@ services:
     volumes:
       - "./assets:/var/www/html/assets"
       - "./config:/var/www/html/config"
+      - "./data:/var/www/html/data"
       - "./migrations:/var/www/html/migrations"
       - "./src:/var/www/html/src"
       - "./templates:/var/www/html/templates"
