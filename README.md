@@ -26,18 +26,15 @@ file `files/measurements.xlsx`
     - **IMPORTANT**: Data uploads should be stored into the directory `data/uploads/`
   - **Or**; Create a `Symfony Command` to process the file.
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
-- Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.
+- Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.  CSV format is fine.
 
 ## Expectations
 **Mandatory**
 - SOLID and KISS Principles
+- Use PHP Strict Types
 - Clean readable code
-- Security
-- Data Validation
-- PHP Coding Standards, Linting, etc.
-  - Update README.md on how to run
-  - Hint: These tools are installed via `composer.json` please make sure you use them.
-- PHP Strict Types: Type-hinting
+- PHP Coding Standards
+  - These tools are installed via `composer.json` please make sure you use them.
 
 ## Pollutant Data
 As stated in the requirements, you can either;
