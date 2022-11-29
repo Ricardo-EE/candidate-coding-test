@@ -46,6 +46,8 @@ As stated in the requirements, you can either;
   - Data uploads should be stored in the directory `data/uploads/`
 - Or, use `Symfony Command` to process the supplied `Excel` data file
 
+**If you'd prefer, you can convert the supplied spreadsheet to a CSV file to avoid using a Spreadsheet processor.**
+
 **Data File**: `files/measurements.xlsx`
 
 **Data is hourly**
