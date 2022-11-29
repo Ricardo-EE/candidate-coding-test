@@ -21,14 +21,10 @@ See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB databas
 aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine migrations to build the database schema
 - Processing Pollutant Data
-  - **Either**; Build a `Symfony Form` for submitting dummy air pollution data,
-    see `Example of Pollutants and Measurements HTML form elements`
-    - **NOTE**: You don't have to use the whole dataset.
-  - **Or**; Process a file upload using a `Symfony Form` using the supplied `Pollutant Data`
+  - **Either**; Process a file upload using a `Symfony Form` using the supplied `Pollutant Data`
 file `files/measurements.xlsx`
-    - **IMPORTANT**: Data uploads should be move/stored into the directory `data/uploads/`
+    - **IMPORTANT**: Data uploads should be stored into the directory `data/uploads/`
   - **Or**; Create a `Symfony Command` to process the file.
-- Symfony Controller to process the submitted data
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.
 
@@ -42,38 +38,14 @@ file `files/measurements.xlsx`
   - Update README.md on how to run
   - Hint: These tools are installed via `composer.json` please make sure you use them.
 - PHP Strict Types: Type-hinting
-- Guard against SQL injection attacks
-
-**Nice to have**
-- Swap use of environmental variables `.env` for Symfony parameters
-- Unit and/or Functional Tests (update README.md on how to run)
-- Use WebPack and implement Bootstrap: https://getbootstrap.com/
-
-## Not Expected
-
-### Bonus
-Use the API https://postcodes.io/postcodes `Bulk Reverse Geocoding` and POST `Longitude` and `Latitude` from the
-supplied `Pollutant Data` to retrieve all relevant `admin_county` from API.  Use this instead of the `Region Name`
-supplied in the source `Pollutant Data` section detailed below.
-
-### Super Bonus
-Implement ClamAV and virus check the uploaded `Excel` data file - if you choose this route.
-
-Uncomment the ClamAV configurations in the `docker-compose.yaml` file.
-
-**Hint**: Use `fsockopen($hostname, $port)`... A `Drupal` example may help you.  See `.env` for ClamAV environment
-variables.
 
 ## Pollutant Data
 As stated in the requirements, you can either;
-- Build a `Symfony Form` with all the data supplied as `input` fields, using limited data from the sample file provided
-- Or, use a `Symfony Form` to upload the supplied `Excel` data file
-  - Data uploads should be moved/stored in the directory `data/uploads/`
+- Use a `Symfony Form` to upload the supplied `Excel` data file
+  - Data uploads should be stored in the directory `data/uploads/`
 - Or, use `Symfony Command` to process the supplied `Excel` data file
 
 **Data File**: `files/measurements.xlsx`
-
-Data submitted via an HTML form will be as follows:
 
 **Data is hourly**
 - Company (string) - Max allowed length 100
@@ -84,15 +56,6 @@ Data submitted via an HTML form will be as follows:
 - List of Pollutants (string) and Measurements (float)
 - Date (string)
 - Time (string)
-
-### Example of Pollutants and Measurements HTML form elements:
-```html
-<input type="text" name="measurement[pollutant][NO2]" value="2.00">
-<input type="text" name="measurement[pollutant][SO2]" value="3.00">
-<input type="text" name="measurement[pollutant][PM25]" value="8.00">
-<input type="text" name="measurement[pollutant][PM10]" value="11.00">
-<input type="text" name="measurement[pollutant][O3]" value="66.00">
-```
 
 ## Submitting Your Solution
 After you have completed your solution, please push to your own GitHub repository and provide us with a link to

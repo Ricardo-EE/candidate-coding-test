@@ -1,16 +1,6 @@
 version: '3.9'
 
 services:
-#  clamav:
-#    image: clamav/clamav
-#    container_name: ricardo-clamav
-#    restart: unless-stopped
-#    volumes:
-#      - clamav:/var/lib/clamav
-#    ports:
-#      - "3310:3310"
-#      - "7357:7357"
-
   php:
     container_name: ricardo-php
     restart: on-failure
@@ -18,7 +8,6 @@ services:
     build: .
     depends_on:
       - db
-#      - clamav
     environment:
       HOME: /var/www/html
       APP_ENV: develop
@@ -54,4 +43,3 @@ services:
 
 volumes:
   db:
-#  clamav:
