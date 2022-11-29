@@ -48,12 +48,10 @@ As stated in the requirements, you can either;
 **Data File**: `files/measurements.xlsx`
 
 **Data is hourly**
-- Company (string) - Max allowed length 100
 - Region Name (string) - Max allowed length 100
 - Site Name (string) - Max allowed length 100
-- Latitude (float)
-- Longitude (float)
-- List of Pollutants (string) and Measurements (float)
+- Pollutant (string)
+- Measurement (float)
 - Date (string)
 - Time (string)
 
