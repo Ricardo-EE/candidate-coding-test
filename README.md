@@ -10,6 +10,10 @@ This is required for UK government purposes.
 Ricardo has a contract for gathering this information across the UK and we have a simple portal where people can log in
 and report that their facility has produced these emissions today.
 
+## Symfony Framework
+This project has already been set-up for you, including a MariaDB database and appropriate doctrine configuration, as
+well as all the necessary `composer` dependencies required to complete the task.
+
 ## Docker
 This project can be automatically started as a Docker Container, just run: `docker-compose up -d` and visit the URL:
 http://localhost:8080.  It is expected that your submission will work with the supplied Docker set-up in this project.
