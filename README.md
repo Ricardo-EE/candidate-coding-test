@@ -21,7 +21,7 @@ http://localhost:8080.  It is expected that your submission will work with the s
 See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB database
 
 ## Requirement
-- Generate Doctrine Entities that reflect the most appropriate schema to store the data (using normalisation), with the
+- Generate Doctrine Entities that reflect the most appropriate schema to store the data, with the
 aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine migrations to build the database schema
 - Pollutant Data: Use the `DataTrait` class in `src/Service/DataTrait.php` to get pollutant data
