@@ -10,7 +10,7 @@ This is required for UK government purposes.
 Ricardo has a contract for gathering this information across the UK and we have a simple portal where people can log in
 and report that their facility has produced these emissions today.
 
-## Symfony Framework
+## Symfony Framework 6.x
 This project has already been set-up for you, including a MariaDB database and appropriate doctrine configuration, as
 well as all the necessary `composer` dependencies required to complete the task.
 
@@ -24,17 +24,16 @@ See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB databas
 - Generate Doctrine Entities that reflect the most appropriate schema to store the data (using normalisation), with the
 aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine migrations to build the database schema
-- Processing Pollutant Data
-  - **Either**; Process a file upload using a `Symfony Form` using the supplied `Pollutant Data`
-file `files/measurements.xlsx`
-    - **IMPORTANT**: Data uploads should be stored into the directory `data/uploads/`
-  - **Or**; Create a `Symfony Command` to process the file.
+- Pollutant Data: Use the `DataTrait` class to get pollutant data
+- Use Symfony Command or Symfony Form and Controller
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
+
+### Output
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.  CSV format is fine.
 
 ## Expectations
-**Mandatory**
 - SOLID and KISS Principles
+- Use PHP8.1
 - Use PHP Strict Types
 - Clean readable code
 - PHP Coding Standards
@@ -42,15 +41,9 @@ file `files/measurements.xlsx`
 
 ## Pollutant Data
 As stated in the requirements, you can either;
-- Use a `Symfony Form` to upload the supplied `Excel` data file
-  - Data uploads should be stored in the directory `data/uploads/`
-- Or, use `Symfony Command` to process the supplied `Excel` data file
+- Create a Symfony Controller or Symfony Command to process the supplied data in the `DataTrait` class.
 
-**If you'd prefer, you can convert the supplied spreadsheet to a CSV file to avoid using a Spreadsheet processor.**
-
-**Data File**: `files/measurements.xlsx`
-
-**Data is hourly**
+### Data
 - Region Name (string) - Max allowed length 100
 - Site Name (string) - Max allowed length 100
 - Pollutant (string)
