@@ -24,7 +24,7 @@ See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB databas
 - Generate Doctrine Entities that reflect the most appropriate schema to store the data (using normalisation), with the
 aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine migrations to build the database schema
-- Pollutant Data: Use the `DataTrait` class to get pollutant data
+- Pollutant Data: Use the `DataTrait` class in `src/Service/DataTrait.php` to get pollutant data
 - Use Symfony Command or Symfony Form and Controller
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 
@@ -32,7 +32,7 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Produce simple output to get the aggregated total `Measurement` by `Region Name` and `Pollutant`.  CSV format is fine.
 
 ## Expectations
-- SOLID and KISS Principles
+- SOLID Principles
 - Use PHP8.1
 - Use PHP Strict Types
 - Clean readable code
@@ -41,7 +41,7 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 
 ## Pollutant Data
 As stated in the requirements, you can either;
-- Create a Symfony Controller or Symfony Command to process the supplied data in the `DataTrait` class.
+- Create a Symfony Controller or Symfony Command to process the supplied data in the `DataTrait` class at `src/Service/DataTrait.php`.
 
 ### Data
 - Region Name (string) - Max allowed length 100
@@ -50,6 +50,22 @@ As stated in the requirements, you can either;
 - Measurement (float)
 - Date (string)
 - Time (string)
+
+### Data Array Format
+Example of data array format, which can be found in `src/Service/DataTrait.php`.
+
+```php
+[
+    [
+        'region_name' => 'Wirral District',
+        'site_name' => 'Wirral Tranmere',
+        'pollutant' => 'O3',
+        'measurement' => 19.957000,
+        'measurement_date' => '11/1/2022',
+        'measurement_time' => '3:00:00',
+    ],
+]
+```
 
 ## Submitting Your Solution
 After you have completed your solution, please push to your own GitHub repository and provide us with a link to
