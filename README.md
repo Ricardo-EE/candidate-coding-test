@@ -25,7 +25,7 @@ See `docker-compose.yaml` and `Dockerfile` for configuration for MariaDB databas
 aim to easily generate aggregated reports, see `Pollutant Data` section.
 - Use Doctrine migrations to build the database schema
 - Pollutant Data: Use the `DataTrait` class in `src/Service/DataTrait.php` to get pollutant data
-- Use Symfony Command or Symfony Form and Controller
+- Use Symfony Command or a Symfony Controller
 - Use Doctrine to save the data into the MariaDB database detailed in the `docker-compose.yaml` file.
 
 ### Output
@@ -41,7 +41,7 @@ aim to easily generate aggregated reports, see `Pollutant Data` section.
 
 ## Pollutant Data
 As stated in the requirements, you can either;
-- Create a Symfony Controller or Symfony Command to process the supplied data in the `DataTrait` class at `src/Service/DataTrait.php`.
+- Create a Symfony Command or Symfony Controller to process the supplied data in the `DataTrait` class at `src/Service/DataTrait.php`.
 
 ### Data
 - Region Name (string) - Max allowed length 100
@@ -71,6 +71,6 @@ Example of data array format, which can be found in `src/Service/DataTrait.php`.
 After you have completed your solution, please push to your own GitHub repository and provide us with a link to
 review your submission.
 
-Please provide any additional instructions if there are any special set-up requirements.
+**Please provide any additional instructions if there are any special set-up requirements.**
 
 Copyright © 2022 Ricardo AEA Ltd
